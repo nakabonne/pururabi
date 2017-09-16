@@ -10,5 +10,5 @@ import UIKit
 import JTAppleCalendar
 
 class CustomCell: JTAppleCell {
-    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
 }
