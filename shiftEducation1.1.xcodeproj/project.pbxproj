@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5489AC05E9D54FBEF4226AA8 /* Pods_shiftEducation1_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */; };
 		9170C3951F6CBBB1008AB319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170C3941F6CBBB1008AB319 /* AppDelegate.swift */; };
 		9170C3971F6CBBB1008AB319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170C3961F6CBBB1008AB319 /* ViewController.swift */; };
 		9170C39A1F6CBBB1008AB319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9170C3981F6CBBB1008AB319 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		9170C39B1F6CBBB1008AB319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9170C39E1F6CBBB1008AB319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9170C3A01F6CBBB1008AB319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.debug.xcconfig"; sourceTree = "<group>"; };
+		D9AE304DEB7BA37868771E30 /* Pods-shiftEducation1.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.release.xcconfig"; sourceTree = "<group>"; };
+		F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shiftEducation1_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5489AC05E9D54FBEF4226AA8 /* Pods_shiftEducation1_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A8373BE3D37D808603E3D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2426EAE77D3B48E636EE0AC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */,
+				D9AE304DEB7BA37868771E30 /* Pods-shiftEducation1.1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9170C3881F6CBBB0008AB319 = {
 			isa = PBXGroup;
 			children = (
 				9170C3931F6CBBB1008AB319 /* shiftEducation1.1 */,
 				9170C3921F6CBBB1008AB319 /* Products */,
+				2426EAE77D3B48E636EE0AC3 /* Pods */,
+				1A8373BE3D37D808603E3D32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9170C3A31F6CBBB1008AB319 /* Build configuration list for PBXNativeTarget "shiftEducation1.1" */;
 			buildPhases = (
+				9E4F4ABB657325F1DF2BFBC8 /* [CP] Check Pods Manifest.lock */,
 				9170C38D1F6CBBB0008AB319 /* Sources */,
 				9170C38E1F6CBBB0008AB319 /* Frameworks */,
 				9170C38F1F6CBBB0008AB319 /* Resources */,
+				2FCE6D35D2670EED41EDB30D /* [CP] Embed Pods Frameworks */,
+				A9A63F1E5B1B45267536E402 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FCE6D35D2670EED41EDB30D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E4F4ABB657325F1DF2BFBC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shiftEducation1.1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A63F1E5B1B45267536E402 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9170C38D1F6CBBB0008AB319 /* Sources */ = {
@@ -259,6 +340,7 @@
 		};
 		9170C3A41F6CBBB1008AB319 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58B7G9GY4;
@@ -272,6 +354,7 @@
 		};
 		9170C3A51F6CBBB1008AB319 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AE304DEB7BA37868771E30 /* Pods-shiftEducation1.1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58B7G9GY4;
