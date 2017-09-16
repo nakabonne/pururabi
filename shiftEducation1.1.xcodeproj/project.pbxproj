@@ -13,6 +13,7 @@
 		9170C39A1F6CBBB1008AB319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9170C3981F6CBBB1008AB319 /* Main.storyboard */; };
 		9170C39C1F6CBBB1008AB319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9170C39B1F6CBBB1008AB319 /* Assets.xcassets */; };
 		9170C39F1F6CBBB1008AB319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9170C39D1F6CBBB1008AB319 /* LaunchScreen.storyboard */; };
+		9170C3A71F6CFB5A008AB319 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9170C39B1F6CBBB1008AB319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9170C39E1F6CBBB1008AB319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9170C3A01F6CBBB1008AB319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D9AE304DEB7BA37868771E30 /* Pods-shiftEducation1.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.release.xcconfig"; sourceTree = "<group>"; };
 		F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shiftEducation1_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9170C3A71F6CFB5A008AB319 /* JTAppleCalendar.framework in Frameworks */,
 				5489AC05E9D54FBEF4226AA8 /* Pods_shiftEducation1_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +46,7 @@
 		1A8373BE3D37D808603E3D32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */,
 				F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */,
 			);
 			name = Frameworks;
@@ -101,6 +105,7 @@
 				9170C38F1F6CBBB0008AB319 /* Resources */,
 				2FCE6D35D2670EED41EDB30D /* [CP] Embed Pods Frameworks */,
 				A9A63F1E5B1B45267536E402 /* [CP] Copy Pods Resources */,
+				9170C3A81F6CFB93008AB319 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -177,6 +182,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9170C3A81F6CFB93008AB319 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		9E4F4ABB657325F1DF2BFBC8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -344,6 +363,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58B7G9GY4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = shiftEducation1.1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nakao.shiftEducation1-1";
@@ -358,6 +381,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58B7G9GY4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = shiftEducation1.1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nakao.shiftEducation1-1";
@@ -385,6 +412,7 @@
 				9170C3A51F6CBBB1008AB319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
