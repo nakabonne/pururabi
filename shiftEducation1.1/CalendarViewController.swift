@@ -116,11 +116,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         handleCellSelected(view: cell, cellState: cellState)
         handleCelltextColor(view: cell, cellState: cellState)
         
-        // TODO リファクタリング-------------
-        self.shifts.insert("へい", at: 0)
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
-        print("へい")
-        // -------------------------------
+        displayShifts(date: date)
     }
     
     //cellの選択状態を外す
@@ -133,9 +129,18 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         setupViewsOfCalendar(from: visibleDates)
     }
     
+    func displayShifts(date: Date){
+        print(date)
+        // TODO dateShiftsモデルからdateに紐づくshiftを取得
+        self.shifts.insert("へい", at: 0)
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
+    }
+    
+    // テーブルの行数を返却する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shifts.count
     }
+    // テーブルの行ごとのセルを返却する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shiftCell", for: indexPath)
         
