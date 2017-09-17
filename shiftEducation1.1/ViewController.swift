@@ -30,7 +30,22 @@ class ViewController: UIViewController {
         calendarView.minimumInteritemSpacing = 0
     }
     
-    func handleCellTextColor(view: JTAppleCell?, cellState: CellState){
+    func handleCelltextColor(view: JTAppleCell?, cellState: CellState){
+        guard let validCell = view as? CustomCell else{ return }
+        
+        if cellState.isSelected{
+            validCell.dateLabel.textColor = selectedMonthColor
+        }else{
+            if cellState.dateBelongsTo == .thisMonth{
+                validCell.dateLabel.textColor = monthColor
+            }else{
+                validCell.dateLabel.textColor = outsideMonthColor
+            }
+        }
+        
+    }
+    
+    func handleCellSelected(view: JTAppleCell?, cellState: CellState){
         guard let validCell = view as? CustomCell else { return }
         if validCell.isSelected{
             validCell.selectedView.isHidden = false
@@ -69,18 +84,20 @@ extension ViewController: JTAppleCalendarViewDelegate{
         
         cell.dateLabel.text = cellState.text
         
-        handleCellTextColor(view: cell, cellState: cellState)
+        handleCellSelected(view: cell, cellState: cellState)
+        handleCelltextColor(view: cell, cellState: cellState)
+        
         return cell
     }
     
     // cellを選択状態にする
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        handleCellTextColor(view: cell, cellState: cellState)
+        handleCellSelected(view: cell, cellState: cellState)
     }
     
     //cellの選択状態を外す
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        handleCellTextColor(view: cell, cellState: cellState)
+        handleCellSelected(view: cell, cellState: cellState)
 
     }
     
