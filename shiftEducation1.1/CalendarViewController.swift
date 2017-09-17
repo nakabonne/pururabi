@@ -9,17 +9,20 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController {
+class CalendarViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    // カレンダー
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
-    
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a194b)
     let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d)
-    
     let formatter = DateFormatter()
+    
+    // テーブル
+    @IBOutlet weak var tableView: UITableView!
+    var shifts = [String]()
     
 
     override func viewDidLoad() {
@@ -112,7 +115,12 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
         handleCelltextColor(view: cell, cellState: cellState)
+        
+        // TODO リファクタリング-------------
+        self.shifts.insert("へい", at: 0)
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
         print("へい")
+        // -------------------------------
     }
     
     //cellの選択状態を外す
@@ -123,6 +131,16 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shifts.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shiftCell", for: indexPath)
+        
+        cell.textLabel?.text = shifts[indexPath.row]
+        return cell
     }
     
 }
@@ -137,3 +155,6 @@ extension UIColor{
         )
     }
 }
+
+
+

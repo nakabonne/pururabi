@@ -169,7 +169,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="42" id="jRl-Sn-K2r">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shiftCell" rowHeight="42" id="jRl-Sn-K2r">
                                         <rect key="frame" x="0.0" y="28" width="375" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jRl-Sn-K2r" id="U6L-BJ-aOu">
@@ -178,6 +178,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="o5q-7J-E7g"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uiB-cd-ePq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.3580940808261554" green="0.52162593949955371" blue="0.72336632013320923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,6 +194,7 @@
                     <connections>
                         <outlet property="calendarView" destination="GtB-iK-LF1" id="kSm-dv-y7m"/>
                         <outlet property="month" destination="dqB-ss-fo4" id="gEu-C5-rKl"/>
+                        <outlet property="tableView" destination="sPE-B7-mmw" id="plc-Xx-RRM"/>
                         <outlet property="year" destination="bvy-dJ-omb" id="Euv-oG-jLC"/>
                     </connections>
                 </viewController>
