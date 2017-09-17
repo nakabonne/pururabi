@@ -76,7 +76,7 @@
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GtB-iK-LF1" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
                                         <rect key="frame" x="0.0" y="20.5" width="375" height="335"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.60770664058441359" green="0.67643274779373253" blue="0.72336632013320923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="332" id="B81-4a-bne"/>
                                             <constraint firstAttribute="height" constant="335" id="oUv-w7-hWi"/>
@@ -95,6 +95,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwH-dQ-t6O">
+                                                            <rect key="frame" x="35" y="34.5" width="40" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="0.82181332413361952" blue="0.4548146312561453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="dEF-xI-z0G"/>
+                                                                <constraint firstAttribute="height" constant="40" id="rni-ru-Z03"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.Radius">
+                                                                    <integer key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khP-5K-zdJ">
                                                             <rect key="frame" x="34" y="45" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -104,8 +117,10 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
+                                                    <constraint firstItem="vwH-dQ-t6O" firstAttribute="centerY" secondItem="KWS-d9-SXK" secondAttribute="centerY" id="1tt-wk-voN"/>
                                                     <constraint firstItem="khP-5K-zdJ" firstAttribute="centerX" secondItem="KWS-d9-SXK" secondAttribute="centerX" id="Dhy-HF-A2e"/>
                                                     <constraint firstItem="khP-5K-zdJ" firstAttribute="centerY" secondItem="KWS-d9-SXK" secondAttribute="centerY" id="IJy-sD-P7e"/>
+                                                    <constraint firstItem="vwH-dQ-t6O" firstAttribute="centerX" secondItem="KWS-d9-SXK" secondAttribute="centerX" id="aoe-n7-SNw"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="khP-5K-zdJ" id="Nja-d9-3Yb"/>
@@ -133,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="138.5"/>
+            <point key="canvasLocation" x="135.19999999999999" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>
