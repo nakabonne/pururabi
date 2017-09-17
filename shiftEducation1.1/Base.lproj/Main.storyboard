@@ -103,7 +103,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="rni-ru-Z03"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.Radius">
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                     <integer key="value" value="20"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
@@ -124,6 +124,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="khP-5K-zdJ" id="Nja-d9-3Yb"/>
+                                                    <outlet property="selectedView" destination="vwH-dQ-t6O" id="PuZ-QX-heC"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -148,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="138.0809595202399"/>
+            <point key="canvasLocation" x="-290" y="152"/>
         </scene>
     </scenes>
 </document>
