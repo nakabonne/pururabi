@@ -93,12 +93,13 @@ extension ViewController: JTAppleCalendarViewDelegate{
     // cellを選択状態にする
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
+        handleCelltextColor(view: cell, cellState: cellState)
     }
     
     //cellの選択状態を外す
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
-
+        handleCelltextColor(view: cell, cellState: cellState)
     }
     
 }
