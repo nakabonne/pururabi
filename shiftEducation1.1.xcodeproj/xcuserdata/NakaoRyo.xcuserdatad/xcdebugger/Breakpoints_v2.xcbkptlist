@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "shiftEducation1.1/ViewController.swift"
-            timestampString = "527305932.999912"
+            timestampString = "527308818.481914"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "configureCalendar(_:)"
             landmarkType = "7">
          </BreakpointContent>
