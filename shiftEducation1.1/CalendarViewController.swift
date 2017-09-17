@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalendarViewController.swift
 //  shiftEducation1.1
 //
 //  Created by 中尾涼 on 2017/09/16.
@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class ViewController: UIViewController {
+class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: JTAppleCalendarViewDataSource{
+extension CalendarViewController: JTAppleCalendarViewDataSource{
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
@@ -95,7 +95,7 @@ extension ViewController: JTAppleCalendarViewDataSource{
     }
 }
 
-extension ViewController: JTAppleCalendarViewDelegate{
+extension CalendarViewController: JTAppleCalendarViewDelegate{
     // Display the cell
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
@@ -112,6 +112,7 @@ extension ViewController: JTAppleCalendarViewDelegate{
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
         handleCelltextColor(view: cell, cellState: cellState)
+        print("へい")
     }
     
     //cellの選択状態を外す
