@@ -122,6 +122,11 @@
                                                     <constraint firstItem="khP-5K-zdJ" firstAttribute="centerY" secondItem="KWS-d9-SXK" secondAttribute="centerY" id="IJy-sD-P7e"/>
                                                     <constraint firstItem="vwH-dQ-t6O" firstAttribute="centerX" secondItem="KWS-d9-SXK" secondAttribute="centerX" id="aoe-n7-SNw"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="khP-5K-zdJ" id="Nja-d9-3Yb"/>
                                                     <outlet property="selectedView" destination="vwH-dQ-t6O" id="PuZ-QX-heC"/>
@@ -146,6 +151,9 @@
                             <constraint firstItem="tEB-ip-8Lw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sxo-Ah-L04"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="GtB-iK-LF1" id="kSm-dv-y7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

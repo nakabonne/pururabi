@@ -10,11 +10,18 @@ import UIKit
 import JTAppleCalendar
 
 class ViewController: UIViewController {
+    @IBOutlet weak var calendarView: JTAppleCalendarView!
     let formatter = DateFormatter()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupCalendarView()
+    }
+    
+    func setupCalendarView(){
+        calendarView.minimumLineSpacing = 0
+        calendarView.minimumInteritemSpacing = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +53,7 @@ extension ViewController: JTAppleCalendarViewDelegate{
         cell.dateLabel.text = cellState.text
         return cell
     }
-    
+    // When touch a cell
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else { return }
         validCell.selectedView.isHidden = false
