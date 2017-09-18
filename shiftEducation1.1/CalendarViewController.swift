@@ -147,6 +147,19 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         cell.textLabel?.text = shifts[indexPath.row]
         return cell
     }
+    // 現状使ってない-------------------------------------------------------------------------------
+    // セルが編集可能か
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    // セル削除
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            shifts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        }
+    }
+    // -------------------------------------------------------------------------------------------
     
 }
 
