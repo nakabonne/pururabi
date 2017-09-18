@@ -116,6 +116,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         handleCellSelected(view: cell, cellState: cellState)
         handleCelltextColor(view: cell, cellState: cellState)
         
+        clearTable()
         displayShifts(date: date)
     }
     
@@ -129,13 +130,16 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         setupViewsOfCalendar(from: visibleDates)
     }
     
+    func clearTable(){
+        shifts.removeAll()
+        tableView.reloadData()
+    }
+    
     func displayShifts(date: Date){
         print(date)
         // TODO dateShiftsモデルからdateに紐づくshiftを取得
-        self.shifts.removeAll()
-        self.tableView.reloadData()
-        self.shifts.insert("へい", at: 0)
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
+        shifts.insert("へい", at: 0)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
     }
     
     // テーブルの行数を返却する
