@@ -84,15 +84,31 @@
 		9170C3931F6CBBB1008AB319 /* shiftEducation1.1 */ = {
 			isa = PBXGroup;
 			children = (
+				91FFC4B21F6F520700F15971 /* Views */,
+				91FFC4B11F6F51E200F15971 /* Controllers */,
 				9170C3941F6CBBB1008AB319 /* AppDelegate.swift */,
-				9170C3961F6CBBB1008AB319 /* CalendarViewController.swift */,
 				9170C3981F6CBBB1008AB319 /* Main.storyboard */,
 				9170C39B1F6CBBB1008AB319 /* Assets.xcassets */,
 				9170C39D1F6CBBB1008AB319 /* LaunchScreen.storyboard */,
 				9170C3A01F6CBBB1008AB319 /* Info.plist */,
-				9170C3A91F6D005A008AB319 /* CustomCell.swift */,
 			);
 			path = shiftEducation1.1;
+			sourceTree = "<group>";
+		};
+		91FFC4B11F6F51E200F15971 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9170C3961F6CBBB1008AB319 /* CalendarViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		91FFC4B21F6F520700F15971 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9170C3A91F6D005A008AB319 /* CustomCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
