@@ -15,6 +15,7 @@
 		9170C39F1F6CBBB1008AB319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9170C39D1F6CBBB1008AB319 /* LaunchScreen.storyboard */; };
 		9170C3A71F6CFB5A008AB319 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */; };
 		9170C3AA1F6D005A008AB319 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170C3A91F6D005A008AB319 /* CustomCell.swift */; };
+		91E3B0611F6F72AB00277C48 /* ShiftRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9170C3A01F6CBBB1008AB319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		9170C3A91F6D005A008AB319 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftRegistrationViewController.swift; sourceTree = "<group>"; };
 		9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.debug.xcconfig"; sourceTree = "<group>"; };
 		D9AE304DEB7BA37868771E30 /* Pods-shiftEducation1.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.release.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.release.xcconfig"; sourceTree = "<group>"; };
 		F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shiftEducation1_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				9170C3961F6CBBB1008AB319 /* CalendarViewController.swift */,
+				91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E3B0611F6F72AB00277C48 /* ShiftRegistrationViewController.swift in Sources */,
 				9170C3971F6CBBB1008AB319 /* CalendarViewController.swift in Sources */,
 				9170C3AA1F6D005A008AB319 /* CustomCell.swift in Sources */,
 				9170C3951F6CBBB1008AB319 /* AppDelegate.swift in Sources */,

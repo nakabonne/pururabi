@@ -160,14 +160,18 @@
                                     <constraint firstAttribute="height" constant="405.5" id="Ymt-jC-Muu"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageSwitch.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nv5-f4-3qB">
-                                <rect key="frame" x="318" y="42" width="48" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-B7-mmw">
                                 <rect key="frame" x="0.0" y="427" width="375" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tnd-B9-ZJQ">
+                                    <rect key="frame" x="0.0" y="70" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="シフト登録"/>
+                                    <connections>
+                                        <action selector="goNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eG-og-SlC"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shiftCell" rowHeight="42" id="jRl-Sn-K2r">
                                         <rect key="frame" x="0.0" y="28" width="375" height="42"/>
@@ -200,10 +204,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559.20000000000005" y="102.99850074962519"/>
+            <point key="canvasLocation" x="-1199" y="106"/>
+        </scene>
+        <!--Shift Registration View Controller-->
+        <scene sceneID="CUR-Oo-309">
+            <objects>
+                <viewController storyboardIdentifier="shiftRegistration" id="cMu-QI-hek" customClass="ShiftRegistrationViewController" customModule="shiftEducation1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IKc-Sa-qSm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ghx-4E-Lez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fLU-L0-9YX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQF-ll-KD2">
+                                <rect key="frame" x="149" y="535" width="77" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="シフト登録"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHC-8R-Hne">
+                                <rect key="frame" x="308" y="56" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="mp0-Xe-uMO" kind="unwind" unwindAction="goBack:" id="GET-gv-QEz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZB-3x-Mp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mp0-Xe-uMO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-480.80000000000001" y="104.7976011994003"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imageSwitch.png" width="16" height="16"/>
-    </resources>
 </document>

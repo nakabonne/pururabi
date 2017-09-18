@@ -14,6 +14,7 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
+    
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a194b)
@@ -23,6 +24,14 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     // テーブル
     @IBOutlet weak var tableView: UITableView!
     var shifts = [String]()
+    
+    // 画面遷移ボタン
+    @IBAction func goBack(_ segue:UIStoryboardSegue) {}
+    
+    @IBAction func goNext(_ sender:UIButton) {
+        let next = storyboard!.instantiateViewController(withIdentifier: "shiftRegistration")
+        self.present(next,animated: true, completion: nil)
+    }
     
 
     override func viewDidLoad() {
