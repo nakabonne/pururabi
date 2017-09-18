@@ -15,8 +15,14 @@ class Shift: NSObject, NSCoding{
     var breakTime: Date?
     var salary: Int?
     
-    override init() {
-        
+    let userDefaults = UserDefaults.standard
+    
+    init(title: String?, startTime: Date?, endTime: Date?, breakTime: Date?, salary: Int?) {
+        self.title = title
+        self.startTime = startTime
+        self.endTime = endTime
+        self.breakTime = breakTime
+        self.salary = salary
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,5 +39,21 @@ class Shift: NSObject, NSCoding{
         aCoder.encode(endTime, forKey: "endTime")
         aCoder.encode(breakTime, forKey: "breakTime")
         aCoder.encode(salary, forKey: "salary")
+    }
+    
+    func insert(){
+        let archiveData = NSKeyedArchiver.archivedData(withRootObject: self)
+        if let t = title{
+            userDefaults.set(archiveData, forKey: "shift_" + t)
+        }
+    }
+    
+    func find(key: String) -> Shift?{
+        let storedData = userDefaults.object(forKey: key) as? Data
+        if let data = storedData {
+            let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: data) as? Shift
+            return unarchivedData
+        }
+        return nil
     }
 }

@@ -65,6 +65,53 @@
             endingLineNumber = "11"
             landmarkName = "Shift"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "shiftEducation1_1.Shift.__deallocating_deinit"
+                  moduleName = "shiftEducation1.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/NakaoRyo/Documents/private/ios/shiftEducation1.1/shiftEducation1.1/Shift.swift"
+                  timestampString = "527416411.108673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "shiftEducation1_1.Shift.init () -&gt; shiftEducation1_1.Shift"
+                  moduleName = "shiftEducation1.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/NakaoRyo/Documents/private/ios/shiftEducation1.1/shiftEducation1.1/Shift.swift"
+                  timestampString = "527416411.111164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "shiftEducation1_1.Shift.__allocating_init () -&gt; shiftEducation1_1.Shift"
+                  moduleName = "shiftEducation1.1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/NakaoRyo/Documents/private/ios/shiftEducation1.1/shiftEducation1.1/Shift.swift"
+                  timestampString = "527416411.115143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
