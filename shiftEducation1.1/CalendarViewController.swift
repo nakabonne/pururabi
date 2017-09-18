@@ -132,6 +132,8 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     func displayShifts(date: Date){
         print(date)
         // TODO dateShiftsモデルからdateに紐づくshiftを取得
+        self.shifts.removeAll()
+        self.tableView.reloadData()
         self.shifts.insert("へい", at: 0)
         self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
     }
@@ -157,6 +159,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         if editingStyle == UITableViewCellEditingStyle.delete{
             shifts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            // TODO データ削除処理
         }
     }
     // -------------------------------------------------------------------------------------------
