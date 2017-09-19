@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Shift: NSObject, NSCoding{
     var title: String?

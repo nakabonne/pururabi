@@ -223,6 +223,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework<br />$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);

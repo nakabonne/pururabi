@@ -1,1 +1,2 @@
 github "patchthecode/JTAppleCalendar" "7.0.6"
+github "realm/realm-cocoa" "v2.10.1"
