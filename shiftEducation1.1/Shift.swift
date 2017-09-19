@@ -10,58 +10,28 @@ import Foundation
 import RealmSwift
 
 class Shift: Object{
+    dynamic var id = Int()
     dynamic var title = String()
-    dynamic var startDate = NSDate()
-    dynamic var endDate = NSDate()
-    dynamic var breakDate = NSDate()
+    dynamic var startDate = Date()
+    dynamic var endDate = Date()
+    dynamic var breakDate = Date()
     dynamic var salary = Int()
-/*
-    var title: String?
-    var startTime: Date?
-    var endTime: Date?
-    var breakTime: Date?
-    var salary: Int?
     
-    let userDefaults = UserDefaults.standard
-    
-    init(title: String?, startTime: Date?, endTime: Date?, breakTime: Date?, salary: Int?) {
+    convenience required init(title: String, startDate: Date, endDate: Date, breakTime: Date, salary: Int) {
+        self.init()
         self.title = title
-        self.startTime = startTime
-        self.endTime = endTime
-        self.breakTime = breakTime
+        self.startDate = startDate
+        self.endDate = endDate
+        self.breakDate = breakTime
         self.salary = salary
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        title = aDecoder.decodeObject(forKey: "title") as? String
-        startTime = aDecoder.decodeObject(forKey: "startTime") as? Date
-        endTime = aDecoder.decodeObject(forKey: "endTime") as? Date
-        breakTime = aDecoder.decodeObject(forKey: "breakTime") as? Date
-        salary = aDecoder.decodeObject(forKey: "salary") as? Int
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(title, forKey: "title")
-        aCoder.encode(startTime, forKey: "startTime")
-        aCoder.encode(endTime, forKey: "endTime")
-        aCoder.encode(breakTime, forKey: "breakTime")
-        aCoder.encode(salary, forKey: "salary")
-    }
-    
     func insert(){
-        let archiveData = NSKeyedArchiver.archivedData(withRootObject: self)
-        if let t = title{
-            userDefaults.set(archiveData, forKey: "shift_" + t)
+        let realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        id = realm.objects(Shift.self).count
+        try! realm.write {
+            realm.add(self)
         }
     }
-    
-    func find(key: String) -> Shift?{
-        let storedData = userDefaults.object(forKey: key) as? Data
-        if let data = storedData {
-            let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: data) as? Shift
-            return unarchivedData
-        }
-        return nil
-    }
-*/
 }
