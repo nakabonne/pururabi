@@ -27,7 +27,6 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // 画面遷移ボタン
     @IBAction func goBack(_ segue:UIStoryboardSegue) {}
-    
     @IBAction func goNext(_ sender:UIButton) {
         let next = storyboard!.instantiateViewController(withIdentifier: "shiftRegistration")
         self.present(next,animated: true, completion: nil)
@@ -145,7 +144,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     }
     
     func displayShifts(date: Date){
-        print(date)
+        print(type(of: date))
         // TODO dateShiftsモデルからdateに紐づくshiftを取得
         shifts.insert("へい", at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
@@ -162,7 +161,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         cell.textLabel?.text = shifts[indexPath.row]
         return cell
     }
-    // 現状使ってない-------------------------------------------------------------------------------
     // セルが編集可能か
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -175,7 +173,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
             // TODO データ削除処理
         }
     }
-    // -------------------------------------------------------------------------------------------
     
 }
 

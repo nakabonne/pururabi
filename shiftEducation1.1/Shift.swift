@@ -28,10 +28,16 @@ class Shift: Object{
     
     func insert(){
         let realm = try! Realm()
+        // realmファイルのURLをデバッグ出力
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         id = realm.objects(Shift.self).count
         try! realm.write {
             realm.add(self)
         }
     }
+    /*
+    使い方
+    let shift = Shift(title: "hey", startDate: Date(), endDate: Date(), breakTime: Date(), salary: 1000)
+    shift.insert()
+    */
 }

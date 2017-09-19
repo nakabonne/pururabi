@@ -17,6 +17,7 @@
 		9170C3AA1F6D005A008AB319 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170C3A91F6D005A008AB319 /* CustomCell.swift */; };
 		91A2CBBB1F70D149003667A4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A2CBBA1F70D149003667A4 /* Realm.framework */; };
 		91A2CBBD1F70D15A003667A4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A2CBBC1F70D15A003667A4 /* RealmSwift.framework */; };
+		91D196E11F70FA9B00002FDF /* DateShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D196E01F70FA9B00002FDF /* DateShift.swift */; };
 		91E3B0611F6F72AB00277C48 /* ShiftRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */; };
 		91E3B0641F6FA1D800277C48 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B0631F6FA1D800277C48 /* Shift.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		9170C3A91F6D005A008AB319 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		91A2CBBA1F70D149003667A4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		91A2CBBC1F70D15A003667A4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		91D196E01F70FA9B00002FDF /* DateShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShift.swift; sourceTree = "<group>"; };
 		91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftRegistrationViewController.swift; sourceTree = "<group>"; };
 		91E3B0631F6FA1D800277C48 /* Shift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				91E3B0631F6FA1D800277C48 /* Shift.swift */,
+				91D196E01F70FA9B00002FDF /* DateShift.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				91E3B0611F6F72AB00277C48 /* ShiftRegistrationViewController.swift in Sources */,
 				9170C3971F6CBBB1008AB319 /* CalendarViewController.swift in Sources */,
+				91D196E11F70FA9B00002FDF /* DateShift.swift in Sources */,
 				9170C3AA1F6D005A008AB319 /* CustomCell.swift in Sources */,
 				9170C3951F6CBBB1008AB319 /* AppDelegate.swift in Sources */,
 				91E3B0641F6FA1D800277C48 /* Shift.swift in Sources */,

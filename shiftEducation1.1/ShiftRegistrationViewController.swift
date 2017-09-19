@@ -11,9 +11,6 @@ import UIKit
 class ShiftRegistrationViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 保存テスト------------------------
-        let shift = Shift(title: "hey", startDate: Date(), endDate: Date(), breakTime: Date(), salary: 1000)
-        shift.insert()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
