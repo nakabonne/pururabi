@@ -15,6 +15,8 @@
 		9170C39F1F6CBBB1008AB319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9170C39D1F6CBBB1008AB319 /* LaunchScreen.storyboard */; };
 		9170C3A71F6CFB5A008AB319 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */; };
 		9170C3AA1F6D005A008AB319 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170C3A91F6D005A008AB319 /* CustomCell.swift */; };
+		91A2CBBB1F70D149003667A4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A2CBBA1F70D149003667A4 /* Realm.framework */; };
+		91A2CBBD1F70D15A003667A4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A2CBBC1F70D15A003667A4 /* RealmSwift.framework */; };
 		91E3B0611F6F72AB00277C48 /* ShiftRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */; };
 		91E3B0641F6FA1D800277C48 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B0631F6FA1D800277C48 /* Shift.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		9170C3A01F6CBBB1008AB319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		9170C3A91F6D005A008AB319 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		91A2CBBA1F70D149003667A4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		91A2CBBC1F70D15A003667A4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		91E3B0601F6F72AB00277C48 /* ShiftRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftRegistrationViewController.swift; sourceTree = "<group>"; };
 		91E3B0631F6FA1D800277C48 /* Shift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		9CA159451AC0DFE539BE6E96 /* Pods-shiftEducation1.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shiftEducation1.1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shiftEducation1.1/Pods-shiftEducation1.1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A2CBBD1F70D15A003667A4 /* RealmSwift.framework in Frameworks */,
+				91A2CBBB1F70D149003667A4 /* Realm.framework in Frameworks */,
 				9170C3A71F6CFB5A008AB319 /* JTAppleCalendar.framework in Frameworks */,
 				5489AC05E9D54FBEF4226AA8 /* Pods_shiftEducation1_1.framework in Frameworks */,
 			);
@@ -52,6 +58,8 @@
 		1A8373BE3D37D808603E3D32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91A2CBBC1F70D15A003667A4 /* RealmSwift.framework */,
+				91A2CBBA1F70D149003667A4 /* Realm.framework */,
 				9170C3A61F6CFB5A008AB319 /* JTAppleCalendar.framework */,
 				F3AE7A4BF4617CB9B4B1D65C /* Pods_shiftEducation1_1.framework */,
 			);
@@ -223,7 +231,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework<br />$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);

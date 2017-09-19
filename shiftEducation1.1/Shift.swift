@@ -9,7 +9,13 @@
 import Foundation
 import RealmSwift
 
-class Shift: NSObject, NSCoding{
+class Shift: Object{
+    dynamic var title = String()
+    dynamic var startDate = NSDate()
+    dynamic var endDate = NSDate()
+    dynamic var breakDate = NSDate()
+    dynamic var salary = Int()
+/*
     var title: String?
     var startTime: Date?
     var endTime: Date?
@@ -57,4 +63,5 @@ class Shift: NSObject, NSCoding{
         }
         return nil
     }
+*/
 }
