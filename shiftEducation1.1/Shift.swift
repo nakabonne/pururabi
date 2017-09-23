@@ -26,6 +26,11 @@ class Shift: Object{
         self.salary = salary
     }
     
+    /*override static func primaryKey() -> String? {
+        return "id"
+    }*/
+
+    
     func insert(){
         let realm = try! Realm()
         // realmファイルのURLをデバッグ出力

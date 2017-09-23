@@ -12,13 +12,17 @@ import RealmSwift
 class DateShift: Object{
     dynamic var id = Int()
     dynamic var StartDate = Date()
-    var shiftIDs = List<Shift>()
+    var shifts = List<Shift>()
     
-    convenience required init(startDate: Date, shiftIDs: List<Shift>) {
+    convenience required init(startDate: Date, shifts: List<Shift>) {
         self.init()
         self.StartDate = startDate
-        self.shiftIDs = shiftIDs
+        self.shifts = shifts
     }
+    
+    /*override static func primaryKey() -> String? {
+        return "id"
+    }*/
     
     func insert(){
         let realm = try! Realm()
@@ -29,9 +33,15 @@ class DateShift: Object{
             realm.add(self)
         }
     }
+    
+    static func findByDate(startDate: Date) -> DateShift?{
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "StartDate = %@", startDate as CVarArg)
+        return realm.objects(DateShift.self).filter(predicate).first
+    }
     /*
      使い方
-     let shift = Shift(title: "hey", startDate: Date(), endDate: Date(), breakTime: Date(), salary: 1000)
+     let shift = DateShift(startDate: Date(), shifts: List())
      shift.insert()
      */
 }

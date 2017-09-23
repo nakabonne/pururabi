@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+import RealmSwift
 
 class CalendarViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // カレンダー
@@ -144,9 +145,21 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     }
     
     func displayShifts(date: Date){
-        print(type(of: date))
-        // TODO dateShiftsモデルからdateに紐づくshiftを取得
-        shifts.insert("へい", at: 0)
+        print(date)
+        // インサートテスト----------------------------------------------------------------------------------------
+        //let d = DateShift(startDate: date, shifts: List())
+        //d.insert()
+        let dateShift = DateShift.findByDate(startDate: date)
+        if let ds = dateShift {
+            for shift in ds.shifts{
+                print(shift)
+                // TODO ①しっかりdateShiftのshiftsを登録する ②シフト時間表示
+                //shifts.insert("ここにシフト時間入れる", at: 0)
+                //tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
+            }
+        }
+        
+        shifts.insert("10:00~15:00 キュービック", at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
     }
     
