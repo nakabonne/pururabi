@@ -154,6 +154,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         d.insert()
         */
         //-------------------------------------------------------------------
+        // TODO ①WorkPlaceモデル作成　②ShiftにworkPlaceIdを付与　③dateShiftのshfitリストをshiftIdリストに　④shift登録処理　⑤workPlace登録処理　⑥dateShift登録処理
         let dateShift = DateShift.findByDate(startDate: date)
         if let ds = dateShift {
             for shift in ds.shifts{
