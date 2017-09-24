@@ -146,21 +146,27 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     
     func displayShifts(date: Date){
         print(date)
-        // インサートテスト----------------------------------------------------------------------------------------
-        //let d = DateShift(startDate: date, shifts: List())
-        //d.insert()
+        // 「インサートテスト」----------------------------------------------------------------------------------------
+        /*
+        let d = DateShift(startDate: date, shifts: List())
+        d.shifts.append(Shift(title: "へい", startDate: Date(), endDate: Date(), breakTime: Date(), salary: 2000))
+        d.shifts.append(Shift(title: "おい", startDate: Date(), endDate: Date(), breakTime: Date(), salary: 2000))
+        d.insert()
+        */
+        //-------------------------------------------------------------------
         let dateShift = DateShift.findByDate(startDate: date)
         if let ds = dateShift {
             for shift in ds.shifts{
                 print(shift)
-                // TODO ①しっかりdateShiftのshiftsを登録する ②シフト時間表示
-                //shifts.insert("ここにシフト時間入れる", at: 0)
-                //tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
+                let formatter = DateFormatter()
+                formatter.dateFormat = "HH:mm"
+                let start = formatter.string(from: shift.startDate)
+                let end = formatter.string(from: shift.endDate)
+                shifts.insert(start+"~"+end, at: 0)
+                tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
             }
         }
         
-        shifts.insert("10:00~15:00 キュービック", at: 0)
-        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.right)
     }
     
     // テーブルの行数を返却する
